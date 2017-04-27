@@ -6,12 +6,17 @@
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script type="text/javascript">
+
 $(document).ready(function(){
-    alert("Blablabla");
     $("#magicButton").click(function(){
         $.get("/rest/thisthat/hello", function(data, status){
             $("#p1").append( document.createTextNode(data) );
+            alert(status);
         });
+    });
+    
+    $("#testButton").click(function(){
+    	 $("#divTest").load("/rest/thisthat/hello");
     });
 });
 	
@@ -22,5 +27,7 @@ $(document).ready(function(){
 	<h1>Try some magic</h1>
 	<button id="magicButton">Send an HTTP GET request to a page and get the result back</button>
 	<p id="p1">From server: </p>
+	<div id="divTest"><p>I am a div... I can change my content by pressing the button "Test"</p></div>
+	<button id="testButton">Test</button>
 </body>
 </html>

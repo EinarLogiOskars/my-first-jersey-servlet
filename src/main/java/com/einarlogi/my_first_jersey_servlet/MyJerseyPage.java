@@ -10,8 +10,15 @@ public class MyJerseyPage {
 
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	public String sayHtmlHello() {
+	public String sayPlainHello() {
 		return "Hello from Jersey";
+	}
+	
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public String sayHtmlHello() {
+		return "<html> " + "<title>" + "Hello Jersey" + "</title>"
+				+ "<body><h1>" + "Hello from Jersey" + "</body><h1>" + "</html>";
 	}
 
 }
