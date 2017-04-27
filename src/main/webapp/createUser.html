@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<link rel="stylesheet" type="text/css" href="createUser.css" />
+<script src="index.js"></script>
+<meta charset="UTF-8">
+</head>
+
+<body>
+	<form method="post">
+
+			<ol>
+			<li><label>Name: <input type="text" id="name"></label></li>
+			<li><label>Initials: <input type="text" id="init"></label></li>
+			<li><label> CPR: <input type="text" id="CPR"></label></li>
+			<li><label>Password:<input type="password" name="password" id="password"></label></li>
+
+			<li>
+			<fieldset>
+				<label>Role: </label> <select>
+					<option value="Admin">Admin</option>
+					<option value="Pharmacist">Pharmacist</option>
+					<option value="Foreman">Foreman</option>
+					<option value="Operator">Operator</option>
+				</select>
+			</fieldset>
+			</li>
+
+			<li><input type="button" value="Create user"></li>
+			</ol>
+
+	</form>
+</body>
+</html>

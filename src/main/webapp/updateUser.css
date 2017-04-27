@@ -1,0 +1,16 @@
+p {
+    color: rgb(255,0,0);
+}
+
+#blabla {
+	width: 300px;
+	background-color: black;
+	text-color: white;
+}
+
+body{
+    background-color: rgb(235,235,235);
+}
+li {
+    list-style-type: none;
+}
