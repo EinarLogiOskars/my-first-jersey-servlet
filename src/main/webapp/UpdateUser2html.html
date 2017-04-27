@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+    <html lang="en-US">
+        <head>
+            <link rel="stylesheet" type="text/css" href= "updateUserCSS2.css"/>
+
+        </head>
+        
+         <body>
+            <form class="flexcontainer">
+        
+                <div class ="flexbox" id="1">
+                    
+                        <label>Name <input type="text">
+                        </label>
+        
+                        <label>Initials <input type="text">
+                        </label>
+        
+                        <label>Social Security Number <input type="text"  onkeypress='return event.charCode >= 48 && event.charCode <= 57 && event.charCode=45'>
+                        </label>                                                                      
+                        Password: <input type="password" name="password">
+                        
+                        <fieldset>
+                            <p> Admin
+                        <input type= "checkbox" id= "Admin">
+                            </p>
+                            
+                            <p> Operator
+                        <input type= "checkbox" id= "Operator">
+                            </p>
+                            
+                            <p> Foreman
+                        <input type= "checkbox" id= "Foreman">
+                            </p>
+                            
+                            <p> Pharmacist
+                        <input type= "checkbox" id= "Pharmacist">
+                            </p>
+                        </fieldset>
+                        
+                        
+                        <li><input type="button" value="Update user" onclick="UpdateUser();">
+                        </input></li>
+                                          
+                </div>
+        
+            </form>
+        </body>
+    </html>
+    

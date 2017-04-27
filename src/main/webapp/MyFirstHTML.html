@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+    <html lang="en-US">
+        <head>
+        <script type="text/javascript"
+                src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+            <link rel="stylesheet" type="text/css" href= "MyFirstCSS.css"/>
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                $("#createuser").click(function() {
+                    $("#div2").load("createuserhtml.html"); 
+                });
+            });
+            
+                
+        </script>
+        
+            <meta charset="UTF-8">
+                  <!-- myFirst.html -->
+                  <title>My very first web page!</title>
+        </head>
+        <body>
+            <form class="flexcontainer">
+        
+                <div class ="flexbox" id="div1">
+                        <fieldset>
+                        
+        <li><input type="button" id="createuser" value="Create user">
+                        </input></li>
+                      
+                        
+                        <li><input type ="submit" value="Show users" onclick="showusers();">
+                        </input></li>
+                      
+                      
+                        <li><input type ="button" value="Update user" onclick="updateUserHTML();">
+                        </input></li>
+
+                        <li><input type ="button" value="Delete user" onclick="deleteUserHTML();">
+                        </input></li>
+                      
+                        </fieldset>                     
+                </div>
+             
+                
+              <div class="flexbox" id="div2">
+                </div>
+        
+            </form>
+        </body>
+    </html>
+    

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+    <html lang="en-US">
+        <head>
+            <link rel="stylesheet" type="text/css" href= "createusercss.css"/>
+                <script src="MyFirstJavascript.js"></script>
+                    <meta charset="UTF-8">
+        </head>
+        
+         <body>
+            <form class="flexcontainer" metod ="post" action="test.php">
+        
+                <div class ="flexbox" id="1">
+                    
+                        <label>Name <input type="text" id="name">
+                        </label>
+        
+                        <label>Initials <input type="text" id="init">
+                        </label>
+        
+                        <label> Social Security Number <input type = "text" onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.charCode == 45' id="CPR">
+                        </label>
+                        Password: <input type="password" name="password" id="password">
+                        
+                        <fieldset>
+                            <p> Admin
+                        <input type= "checkbox" id= "Admin">
+                            </p>
+                            
+                            <p> Operator
+                        <input type= "checkbox" id= "Operator">
+                            </p>
+                            
+                            <p> Foreman
+                        <input type= "checkbox" id= "Foreman">
+                            </p>
+                            
+                            <p> Pharmacist
+                        <input type= "checkbox" id= "Pharmacist">
+                            </p>
+                        </fieldset>
+                        
+                        
+                        <li><input type="submit" value="Create user" onclick="createUser();">
+                        </input></li>
+                                          
+                </div>
+        
+            </form>
+        </body>
+    </html>
+    
