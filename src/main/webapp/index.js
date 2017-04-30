@@ -13,7 +13,7 @@ $(document).ready(function() {
 		
 		$("#SUButton").click(function(){
 			$.ajax({
-				url: "localhost:8080/something",
+				url: "localhost:8080/rest/",
 				data: $("#somethingFromShowUsersHTML"),
 				contentType: "String", 
 				method: 'GET',
@@ -28,7 +28,7 @@ $(document).ready(function() {
 		
 		$("#CUButton").click(function() {
 			$.ajax({
-				url: "localhost:8080/something",
+				url: "localhost:8080/rest/createuser",
 				data: $("form#CUForm").serializeObject(),
 				contentType: "application/json",
 				method: 'POST',
