@@ -20,6 +20,5 @@ public class MyJerseyPage {
 	public String sayHtmlHello() {
 		return "<html> " + "<title>" + "Hello Jersey" + "</title>"
 				+ "<body><h1>" + "Hello from Jersey" + "</body><h1>" + "</html>";
-	}
-
+	}	
 }
