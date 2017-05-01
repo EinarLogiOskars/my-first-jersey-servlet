@@ -11,4 +11,35 @@ $(document).ready(function() {
 			$("#div2").load("updateUser.html");
 		});	
 		
+
+		$("#SUButton").click(function(){
+			$.ajax({
+				url: "localhost:8080/rest/",
+				data: $("#somethingFromShowUsersHTML"),
+				contentType: "String", 
+				method: 'GET',
+				succes: function(data){
+					alert("Got data: " + data);
+				},
+				error: function(jqXHR, text, error){
+					alert(jqXHR.status + text + error);
+				}
+			});
+		});
+		
+		$("#CUButton").click(function() {
+			$.ajax({
+				url: "localhost:8080/rest/createuser",
+				data: $("form#CUForm").serializeObject(),
+				contentType: "application/json",
+				method: 'POST',
+				success : function(data){
+					alert("Posted data: " + data);
+				},
+				error: function(jqXHR, text, error){
+					alert(jqXHR.status + text + error);
+				}
+			});
+		});
+
 });
