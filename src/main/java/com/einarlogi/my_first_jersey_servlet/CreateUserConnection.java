@@ -28,21 +28,6 @@ import com.einarlogi.my_first_jersey_servlet.IUserDAO.DALException;
 public class CreateUserConnection {
 
 	UserStore us = new UserStore();
-	
-	@Context
-	private HttpServletRequest httpRequest;
-
-	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	public Response test(@QueryParam(value = "name") String name) {
-
-		String output = name;
-
-		System.out.println(name);
-
-		return Response.status(200).entity(output).build();
-	}
-
 
 
 	@POST
@@ -50,8 +35,11 @@ public class CreateUserConnection {
 	public Response newUser(String data) throws JSONException {
 
 		String output = data.toString();
-		System.out.println(output);
+		//System.out.println(output);
+		
 		JSONObject jObj = new JSONObject(output);
+		String roles = jObj.getString("roles");
+		//System.out.println(roles);
 		
 		UserDTO user = new UserDTO();
 		
@@ -60,19 +48,23 @@ public class CreateUserConnection {
 		user.setUserName(jObj.getString("userName"));
 		user.setCpr(jObj.getString("cpr"));
 		user.setIni(jObj.getString("ini"));
-		
 		ArrayList<String> listdata = new ArrayList<String>();     
-		JSONArray jArray = jObj.getJSONArray("roles"); 
-		if (jArray != null) { 
-		   for (int i=0;i<jArray.length();i++){ 
-		    listdata.add(jArray.getString(i));
-		   } 
-		} 
+		if (roles.contains("Admin"))
+			listdata.add("Admin");
+		if (roles.contains("Operator"))
+			listdata.add("Operator");
+		if (roles.contains("Foreman"))
+			listdata.add("Foreman");
+		if (roles.contains("Pharmacist"))
+			listdata.add("Pharmacist");
+		
 		user.setRoles(listdata);
 		try {
 			us.createUser(user);
+			
+		//TODO add to database missing!!
+			
 		} catch (DALException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

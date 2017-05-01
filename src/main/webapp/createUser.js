@@ -36,7 +36,7 @@ $(document).ready(function() {
 			roles = roles.concat("\"Pharmacist\", ");
 		}
 		roles = roles.substring(0, roles.length - 2);
-		roles = roles.replace("\\","");
+		roles = roles.replace("//","");
 		roles = roles.concat("]");
 		return roles;
 
