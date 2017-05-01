@@ -75,21 +75,8 @@ public class CreateUserConnection {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
-//		Iterator<?> it = jObj.keys();
-//		
-//
-//		while( it.hasNext() ) {
-//			String key = (String)it.next();
-//			System.out.println(jObj.getString(key));
-//		}
-//
-//		System.out.println(output);
 
 		return Response.status(200).entity(output).build(); 
-
 
 	}
 

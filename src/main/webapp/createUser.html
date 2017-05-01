@@ -10,12 +10,12 @@
 	<form method="post" id="CUForm">
 
 			<ol>
-			<li><label>Name: <input type="text" id="name" name="userName" class="formInput"></label></li>
-			<li><label>Initials: <input type="text" id="init" name="ini" class="formInput"></label></li>
-			<li><label> CPR: <input type="text" id="CPR" name="cpr" class="formInput"></label></li>
+			<li><label>Name: <input type="text" id="userName" name="userName" class="formInput"></label></li>
+			<li><label>Initials: <input type="text" id="ini" name="ini" class="formInput"></label></li>
+			<li><label> CPR: <input type="text" id="cpr" name="cpr" class="formInput"></label></li>
 
 			<li>
-			<fieldset>
+			<fieldset id="CUFieldset">
 				<label>Roles: </label>
                             <p> Admin
                         <input class="cb" type= "checkbox" id= "Admin" value="Admin">
@@ -36,7 +36,7 @@
 			</fieldset>
 			</li>
 
-			<li><input type="submit" value="Create user" id="CUButton"></li>
+			<li><input type="button" value="Create user" id="CUButton"></li>
 			</ol>
 
 	</form>
