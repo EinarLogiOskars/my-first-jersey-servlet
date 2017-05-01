@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 <link rel="stylesheet" type="text/css" href="createUser.css" />
-<script src="index.js"></script>
+<script src="createUser.js"></script>
 <meta charset="UTF-8">
 </head>
 
@@ -10,22 +10,33 @@
 	<form method="post" id="CUForm">
 
 			<ol>
-			<li><label>Name: <input type="text" id="name"></label></li>
-			<li><label>Initials: <input type="text" id="init"></label></li>
-			<li><label> CPR: <input type="text" id="CPR"></label></li>
+			<li><label>Name: <input type="text" id="name" name="userName" class="formInput"></label></li>
+			<li><label>Initials: <input type="text" id="init" name="ini" class="formInput"></label></li>
+			<li><label> CPR: <input type="text" id="CPR" name="cpr" class="formInput"></label></li>
 
 			<li>
 			<fieldset>
-				<label>Role: </label> <select>
-					<option value="Admin">Admin</option>
-					<option value="Pharmacist">Pharmacist</option>
-					<option value="Foreman">Foreman</option>
-					<option value="Operator">Operator</option>
-				</select>
+				<label>Roles: </label>
+                            <p> Admin
+                        <input class="cb" type= "checkbox" id= "Admin" value="Admin">
+                            </p>
+                            
+                            <p> Operator
+                        <input class="cb" type= "checkbox" id= "Operator" value="Operator">
+                            </p>
+                            
+                            <p> Foreman
+                        <input class="cb" type= "checkbox" id= "Foreman" value="Foreman">
+                            </p>
+                            
+                            <p> Pharmacist
+                        <input class="cb" type= "checkbox" id= "Pharmacist" value="Pharmacist">
+                            </p>
+				
 			</fieldset>
 			</li>
 
-			<li><input type="button" value="Create user" id="CUButton"></li>
+			<li><input type="submit" value="Create user" id="CUButton"></li>
 			</ol>
 
 	</form>

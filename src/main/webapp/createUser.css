@@ -9,3 +9,10 @@ body{
 li {
     list-style-type: none;
 }
+
+.formInput {
+	font-size: 100%;
+	padding: 2.5% 10%;
+	background-image: linear-gradient(to top, #fce374, #fcdf5b);
+	background-color: #fce374;
+}

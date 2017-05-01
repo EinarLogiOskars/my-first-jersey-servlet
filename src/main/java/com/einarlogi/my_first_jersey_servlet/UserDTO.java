@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+
 public class UserDTO implements Serializable{
 
 	private static final long serialVersionUID = 4545864587995944260L;
@@ -14,10 +18,11 @@ public class UserDTO implements Serializable{
 	private String password;
 	private String cpr;
 	private List<String> roles;
+	private String roles1;
 	//TODO Add relevant fields
 
 	public UserDTO() {
-		this.roles = new ArrayList<String>();
+		
 	}
 	public String getPassword(){
 		return password;
@@ -77,23 +82,43 @@ public class UserDTO implements Serializable{
 		roles.remove(role);
 	}
 	
-//	@Override
-//	public String toString() {
-//		return "UserDTO [userId=" + userId + ", userName=" + userName + ", ini=" + ini + ", password=" + password
-//				+ ", cpr=" + cpr + ", roles=" + roles + "]";
-//	}
+	public void setRoles1(String roles) {
+		this.roles1 = roles;
+	}
 	
-	
-	@Override
-	public String toString() {
-		if (this.roles.isEmpty())
-			return "UserId: " + userId + " | userName: " + userName + " | ini: " + ini + " | password: " + password
-					+ " | cpr: " + cpr + " | roles: [User has no roles]";
-		else
-			return "UserId: " + userId + " | userName: " + userName + " | ini: " + ini + " | password: " + password
-					+ " | cpr: " + cpr + " | roles: " + roles;
+	public String getRoles1(){
+		return this.roles1;
 	}
 
+	//	@Override
+	//	public String toString() {
+	//		return "UserDTO [userId=" + userId + ", userName=" + userName + ", ini=" + ini + ", password=" + password
+	//				+ ", cpr=" + cpr + ", roles=" + roles + "]";
+	//	}
 
 
+	//	@Override
+	//	public String toString() {
+	//		if (this.roles.isEmpty())
+	//			return "UserId: " + userId + " | userName: " + userName + " | ini: " + ini + " | password: " + password
+	//					+ " | cpr: " + cpr + " | roles: [User has no roles]";
+	//		else
+	//			return "UserId: " + userId + " | userName: " + userName + " | ini: " + ini + " | password: " + password
+	//					+ " | cpr: " + cpr + " | roles: " + roles;
+	//	}
+
+	@Override
+	public String toString() {
+		return new StringBuffer("userId : ").append(this.userId)
+				.append(" userName: ").append(this.userName)
+				.append(" ini: ").append(this.ini).append(" password: ")
+				.append(this.password).append(" cpr:").append(this.cpr)
+				.append(" roles:").append(this.roles).toString();
+		
+	}
 }
+	
+	
+	
+	
+	
