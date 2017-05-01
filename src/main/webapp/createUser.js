@@ -1,35 +1,45 @@
 $(document).ready(function() {
 	$("#CUButton").click(function(){
-		alert("working");
+
 		var person = {
-			userName: $("#userName").val(),
-			ini: $("#ini").val(),
-			cpr: $("#cpr").val(),
-			roles: getRoles(),
+				userName: $("#userName").val(),
+				ini: $("#ini").val(),
+				cpr: $("#cpr").val(),
+				roles: getRoles(),
 		}
-		alert(person);
+		alert("userName: " + person.userName + ", ini: " + person.ini + ", cpr: " + person.cpr + ", roles: " + person.roles);
+		
+		$.ajax({
+			type: "POST",
+			url: "http://localhost:8080/rest/thisthat/createuser",
+			data: JSON.stringify(person),
+			dataType: "json",
+			contentType: "application/json"
+		});
+
 	});
-	
+
 	function getRoles() {
-		
+
 		var roles = "[";
-		
-		if ($("#Admin").checked==true) {
-			roles.append("\"Admin\", ");
+
+		if (Admin.checked==true) {
+			roles = roles.concat("\"Admin\", ");
 		}
-		if ($("#Operator").checked==true) {
-			roles.append("\"Operator\", ");
+		if (Operator.checked==true) {
+			roles = roles.concat("\"Operator\", ");
 		}
-		if ($("#Foreman").checked==true) {
-			roles.append("\"Foreman\", ");
+		if (Foreman.checked==true) {
+			roles = roles.concat("\"Foreman\", ");
 		}
-		if ($("#Pharmacist").checked==true) {
-			roles.append("\"Pharmacist\"");
+		if (Pharmacist.checked==true) {
+			roles = roles.concat("\"Pharmacist\", ");
 		}
-		roles.append("]");
-		
+		roles = roles.substring(0, roles.length - 2);
+		roles = roles.replace("\\","");
+		roles = roles.concat("]");
 		return roles;
-		
+
 	}
 });
 

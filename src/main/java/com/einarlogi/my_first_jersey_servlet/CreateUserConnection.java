@@ -50,7 +50,7 @@ public class CreateUserConnection {
 	public Response newUser(String data) throws JSONException {
 
 		String output = data.toString();
-		
+		System.out.println(output);
 		JSONObject jObj = new JSONObject(output);
 		
 		UserDTO user = new UserDTO();
