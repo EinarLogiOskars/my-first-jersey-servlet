@@ -7,26 +7,36 @@
 </head>
 
 <body>
-	<form method="post">
+	<form method="post" id="UUForm">
 
 			<ol>
-			<li><label>Name: <input type="text" id="name"></label></li>
-			<li><label>Initials: <input type="text" id="init"></label></li>
-			<li><label> CPR: <input type="text" id="CPR"></label></li>
-			<li><label>Password:<input type="password" name="password" id="password"></label></li>
+			<li><label>Name: <input type="text" id="userName" name="userName" class="formInput"></label></li>
+			<li><label>Initials: <input type="text" id="ini" name="ini" class="formInput"></label></li>
+			<li><label> CPR: <input type="text" id="cpr" name="cpr" class="formInput"></label></li>
+			 <li><label> New password:<input type="password" name="password" id="password"></label></li>
 
 			<li>
-			<fieldset>
-				<label>Role: </label> <select>
-					<option value="Admin">Admin</option>
-					<option value="Pharmacist">Pharmacist</option>
-					<option value="Foreman">Foreman</option>
-					<option value="Operator">Operator</option>
-				</select>
+			<fieldset id="UUFieldset">
+				<label>Roles: </label>
+                            <p> Admin
+                        <input class="cb" type= "checkbox" id= "Admin" value="Admin">
+                            </p>                            
+                            <p> Operator
+                        <input class="cb" type= "checkbox" id= "Operator" value="Operator">
+                            </p>
+                            
+                            <p> Foreman
+                        <input class="cb" type= "checkbox" id= "Foreman" value="Foreman">
+                            </p>
+                            
+                            <p> Pharmacist
+                        <input class="cb" type= "checkbox" id= "Pharmacist" value="Pharmacist">
+                            </p>
+				
 			</fieldset>
 			</li>
 
-			<li><input type="button" value="Create user"></li>
+			<li><input type="button" value="Update user" id="UUButton"></li>
 			</ol>
 
 	</form>
