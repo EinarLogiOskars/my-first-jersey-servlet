@@ -20,12 +20,12 @@ $(document).ready(function() {
 				url: "localhost:8080/rest/",
 				//data: $("#somethingFromShowUsersHTML"),
 				//contentType: "String", 
-				method: 'POST',
+				method: 'GET',
 				succes: function(data){
 					alert("Got data: " + data);
 				},
 				error: function(jqXHR, text, error){
-					alert(jqXHR.status + text + error);
+					alert(jqXHR.status + " " +  text + " " + error);
 				}
 			});
 		});
