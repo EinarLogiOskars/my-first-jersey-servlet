@@ -11,13 +11,16 @@ $(document).ready(function() {
 			$("#div2").load("updateUser.html");
 		});	
 		
-
+		$("#deleteuser").click(function() {
+			$("#div2").load("deleteUser.html");
+		});
+		
 		$("#SUButton").click(function(){
 			$.ajax({
 				url: "localhost:8080/rest/",
-				data: $("#somethingFromShowUsersHTML"),
-				contentType: "String", 
-				method: 'GET',
+				//data: $("#somethingFromShowUsersHTML"),
+				//contentType: "String", 
+				method: 'POST',
 				succes: function(data){
 					alert("Got data: " + data);
 				},

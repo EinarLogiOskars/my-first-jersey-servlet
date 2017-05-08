@@ -2,7 +2,7 @@
     <html lang="en-US">
         <head>
             <link rel="stylesheet" type="text/css" href= "createusercss.css"/>
-                <script src="MyFirstJavascript.js"></script>
+                <script src="deleteuser.js"></script>
                     <meta charset="UTF-8">
         </head>
         
@@ -10,11 +10,15 @@
             <form class="flexcontainer">
         
                 <div class ="flexbox" id="1">
+                
+                <div id="response">
+                
+                </div>
 
-                        <label> ID number <input type = "text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                        <label> ID number <input type = "text">
                         </label>
                                             
-                        <li><input type="button" value="Delete user" onclick="deleteUser();">
+                        <li><input type="button" value="Delete user" id="DUButton">
                         </li>
                                           
                 </div>
@@ -22,4 +26,3 @@
             </form>
         </body>
     </html>
-    
